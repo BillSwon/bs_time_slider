@@ -1,4 +1,5 @@
-class slider{
+let style = require("./_slider.sass");
+class Slider{
     constructor(option) {
         this._parentEl = document.getElementById(option.id)
         this._parentEl.className= "custSlider"
@@ -85,26 +86,26 @@ class slider{
     }
 
     mouseMovePoint(e){
-        let { clientX } = e.changedTouches[0]
-        let plase = this._plase.getBoundingClientRect()
-        let endPoint = this._endPoint.getBoundingClientRect()
-        let startPoint = this._startPoint.getBoundingClientRect()
+        let { clientX } = e.changedTouches[0];
+        let plase = this._plase.getBoundingClientRect();
+        let endPoint = this._endPoint.getBoundingClientRect();
+        let startPoint = this._startPoint.getBoundingClientRect();
         if (this.startPointMove){
-            let xEnd = endPoint.x - plase.x - startPoint.width
-            if (clientX-plase.x >= this.startPointTouch && clientX-plase.x <= xEnd){ this._startPoint.style.left = clientX-plase.x-this.startPointTouch+"px" }
-            if (clientX-plase.x < 0){ this._startPoint.style.left = "0px" }
-            if (clientX-plase.x > xEnd){ this._startPoint.style.left = xEnd+"px" }
+            let xEnd = endPoint.x - plase.x - startPoint.width;
+            if (clientX-plase.x >= this.startPointTouch && clientX-plase.x <= xEnd){ this._startPoint.style.left = clientX-plase.x-this.startPointTouch+"px" };
+            if (clientX-plase.x < 0){ this._startPoint.style.left = "0px" };
+            if (clientX-plase.x > xEnd){ this._startPoint.style.left = xEnd+"px" };
         }
         if (this.endPointMove){
-            let letfBorder = xEnd - clientX + endPoint.width - this.endPointTouch > 0
-            let rightBorder = clientX-(endPoint.width - this.endPointTouch) > startPoint.x+startPoint.width
-            let plaseEnd = plase.x + plase.width
+            let letfBorder = xEnd - clientX + endPoint.width - this.endPointTouch > 0;
+            let rightBorder = clientX-(endPoint.width - this.endPointTouch) > startPoint.x+startPoint.width;
+            let plaseEnd = plase.x + plase.width;
             let xEnd = plaseEnd - this._endPoint.clientWidth;
-            if (letfBorder && rightBorder){ this._endPoint.style.right = plaseEnd - clientX - this.endPointTouch + "px" }
-            if (!letfBorder){ this._endPoint.style.right = "0px" }
-            if (!rightBorder) { this._endPoint.style.right = xEnd - startPoint.x-startPoint.width+"px" }
+            if (letfBorder && rightBorder){ this._endPoint.style.right = plaseEnd - clientX - this.endPointTouch + "px" };
+            if (!letfBorder){ this._endPoint.style.right = "0px" };
+            if (!rightBorder) { this._endPoint.style.right = xEnd - startPoint.x-startPoint.width+"px" };
         }
-        if (this.endPointMove || this.startPointMove){ this.changeShtrih();  this.returnEvent()}
+        if (this.endPointMove || this.startPointMove){ this.changeShtrih();  this.returnEvent()};
     }
 
     mouseUpPoint(){
@@ -113,8 +114,8 @@ class slider{
     }
 
     changeShtrih(){
-        this._shtrihPlace.style.left = this._startPoint.style.left
-        this._shtrihPlace.style.width = this._endPoint.getBoundingClientRect().x - this._startPoint.getBoundingClientRect().x +"px"
+        this._shtrihPlace.style.left = this._startPoint.style.left;
+        this._shtrihPlace.style.width = this._endPoint.getBoundingClientRect().x - this._startPoint.getBoundingClientRect().x +"px";
     }
 
     returnEvent(opt){
@@ -124,7 +125,7 @@ class slider{
         let bhour = !opt? Math.floor(Math.floor(startTime)/60)+6: opt.start.hour;
         let bminut = !opt? Math.floor(Math.floor(startTime)%60):opt.start.minut;
         let fhour = !opt? Math.floor(endTime/60)+6 : opt.end.hour;
-        let fminut = !opt? Math.round(endTime%60)  : opt.end.minut
+        let fminut = !opt? Math.round(endTime%60)  : opt.end.minut;
         let det = {
             start: {
                 hour: bhour,
@@ -134,9 +135,9 @@ class slider{
                 hour: fminut >= 60 ? fhour+1 : fhour,
                 minut: fminut >= 60 ? 60-fminut : fminut
             }
-        }
+        };
         this._parentEl.dispatchEvent(new CustomEvent("changeTime", {
-            detail: det}))
+            detail: det}));
     }
 
     onChange(callback){
@@ -170,5 +171,5 @@ class slider{
             }
         })
     }
-}
-export default slider
+};
+export default Slider;

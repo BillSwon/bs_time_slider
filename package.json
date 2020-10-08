@@ -2,9 +2,10 @@
   "name": "bs_time_slider",
   "version": "1.0.0",
   "description": "Slider for select time",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "min": "uglifyjs scropt.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/BillSwon/bs_time_slider/issues"
   },
-  "homepage": "https://github.com/BillSwon/bs_time_slider#readme"
+  "homepage": "https://github.com/BillSwon/bs_time_slider#readme",
+  "dependencies": {
+    "@node-minify/core": "^6.1.0",
+    "@node-minify/uglify-js": "^6.1.0",
+    "uglify-js": "^3.11.1"
+  }
 }
