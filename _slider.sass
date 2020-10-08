@@ -1,0 +1,38 @@
+.custSlider
+  height: 80px
+  width: 100%
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &__plase
+    width: 100%
+    height: 20px
+    position: relative
+    border: 1px solid #ccc
+  &__shtrihPlace
+    position: absolute
+    top: 0px
+    height: 100%
+    width: 100%
+    background: lighten($bg-color-one, 10%)
+  &__startPoint,
+  &__endPoint
+    height: 30px
+    width: 30px
+
+    background: $bg-color-one
+    position: absolute
+    top: -5px
+
+    z-index: 10
+    border-radius: 5px
+
+  &__startPoint
+    left: 0px
+
+  &__endPoint
+    right: 0px
+
+
