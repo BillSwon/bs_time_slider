@@ -1,4 +1,4 @@
-class Slider{
+export class Slider{
     constructor(option) {
         this._parentEl = document.getElementById(option.id)
         this._parentEl.className= "custSlider"
@@ -171,4 +171,3 @@ class Slider{
         })
     }
 };
-export default Slider;
