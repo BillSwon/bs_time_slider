@@ -1,3 +1,3 @@
 import Slider from "./js/Style"
 
-export { Slider }
+module.exports = Slider
