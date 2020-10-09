@@ -1,7 +1,4 @@
 let style = require("./style.css")
-
-
-let style = require("./_slider.sass");
 class Slider{
     constructor(option) {
         this._parentEl = document.getElementById(option.id)
