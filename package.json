@@ -1,6 +1,6 @@
 {
   "name": "bstimeslider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Slider for time select",
   "main": "index.js",
   "scripts": {
