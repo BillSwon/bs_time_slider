@@ -1,0 +1,19 @@
+{
+  "name": "bstimeslider",
+  "version": "1.0.0",
+  "description": "Slider for time select",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillSwon/bs_time_slider.git"
+  },
+  "author": "billswonsardev <kudriavcevartyom@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillSwon/bs_time_slider/issues"
+  },
+  "homepage": "https://github.com/BillSwon/bs_time_slider#readme"
+}
