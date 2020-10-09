@@ -15,10 +15,5 @@
   "bugs": {
     "url": "https://github.com/BillSwon/bs_time_slider/issues"
   },
-  "homepage": "https://github.com/BillSwon/bs_time_slider#readme",
-  "dependencies": {
-    "@node-minify/core": "^6.1.0",
-    "@node-minify/uglify-js": "^6.1.0",
-    "uglify-js": "^3.11.1"
-  }
+  "homepage": "https://github.com/BillSwon/bs_time_slider#readme"
 }
