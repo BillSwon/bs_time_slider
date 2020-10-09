@@ -1,3 +1,6 @@
+let style = require("./style.css")
+
+
 let style = require("./_slider.sass");
 class Slider{
     constructor(option) {

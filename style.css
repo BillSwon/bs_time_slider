@@ -1,0 +1,40 @@
+.custSlider {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custSlider__plase {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.custSlider__shtrihPlace {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background: green;
+}
+
+.custSlider__startPoint, .custSlider__endPoint {
+    height: 30px;
+    width: 30px;
+    background: black;
+    position: absolute;
+    top: -5px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.custSlider__startPoint {
+    left: 0px;
+}
+
+.custSlider__endPoint {
+    right: 0px;
+}
