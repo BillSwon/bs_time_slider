@@ -1,3 +1,1 @@
-import Slider from "./js/Style"
-
-module.exports = Slider
+module.exports = require('./js/Style');
