@@ -1,4 +1,3 @@
-let style = require("./style.css")
 class Slider{
     constructor(option) {
         this._parentEl = document.getElementById(option.id)
